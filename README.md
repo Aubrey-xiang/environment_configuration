@@ -6,6 +6,7 @@ _此文档本意为了跑通视觉自瞄代码，亦可用于自己电脑环境�
 
 ###
 ###
+
 **1.获取资源**
 
 为方便起见，我整理了部分环境所需资源，大家可以通过我的百度网盘获取
@@ -20,6 +21,7 @@ https://pan.baidu.com/s/1NEuoZ661denj51YCFZu-Ew
 ```
 
 ###
+###
 
 **2.下载QQ**
 
@@ -29,10 +31,9 @@ sudo dpkg -i （下载好的安装包名称）
 ```
 
 ###
+###
 
 **3.传输文件**
-
-###
 
 将下载好的压缩包通过qq传输至ubuntu系统
 
@@ -48,7 +49,6 @@ sudo dpkg -i （下载好的安装包名称）
 ###
 
 **4.迈德威视相机驱动安装**
-###
 
 解压Mindvision压缩包，进入该文件夹下
 
@@ -72,6 +72,7 @@ make
 sudo make install
 ```
 至此，迈德威视相机驱动就安装好了
+
 ###
 ###
 
@@ -124,7 +125,9 @@ source /opt/intel/openvino_toolkit_2023.3.0(解压后的文件名)/setupvars.sh
 ###
 ###
 
-7.下载cmake
+**7.下载cmake**
+
+当我们直接使用sudo apt-get install cmake命令下载cmake时无法下载其最新版本，因此我们使用如下方法下载
 
 ```
 sudo apt-get update
@@ -149,37 +152,104 @@ sudo apt-get install cmake
 ###
 
 
-8.一键安装ros humble版本
+**8.一键安装ros humble版本**
+
+此处使用鱼香ros大佬的一键下载命令下载即可
+```
 wget http://fishros.com/install -O fishros && . fishros
+```
 
-下载git
+###
+###
+
+**9.下载git**
+```
 sudo apt install git
+```
 
-下载camera-info-manager包
+###
+###
+
+**10.下载camera-info-manager包**
+
+```
 sudo apt install ros-humble-camera-info-manager
+```
+###
+###
 
-下载xacro包
+**11.下载xacro包**
+
+```
 sudo apt install ros-humble-xacro
+```
 
-后续安装内容是依据自瞄代码readme文件
-fmt库
+###
+###
+
+**12.fmt库**
+```
 sudo apt install libfmt-dev
-Sophus库 (G2O库依赖)
+```
+###
+###
+
+**13.Sophus库 (G2O库依赖)**
+```
 git clone https://github.com/strasdat/Sophus
+```
+```
 cd Sophus
+```
+```
 mkdir build && cd build
+```
+```
 cmake ..
+```
+```
 make -j
+```
+```
 sudo make install
-G2O库 (优化装甲板Yaw角度)
+```
+
+###
+###
+
+**14.G2O库 (优化装甲板Yaw角度)**
+```
 sudo apt install libeigen3-dev libspdlog-dev libsuitesparse-dev qtdeclarative5-dev qt5-qmake libqglviewer-dev-qt5
+```
+```
 git clone https://github.com/RainerKuemmerle/g2o
+```
+```
 cd g2o
+```
+```
 mkdir build && cd build
+```
+```
 cmake ..
+```
+```
 make -j
+```
+```
 sudo make install
-Ceres库 (能量机关曲线拟合)
+```
+###
+###
+
+**15.Ceres库 (能量机关曲线拟合)**
+
+```
 sudo apt install libceres-dev
-本文档中可能有缺漏，如有，可以用rosdep安装剩下依赖
-rosdep install --from-paths src --ignore-src -r -y
+```
+###
+###
+
+_至此，环境配成！_
+
+###
