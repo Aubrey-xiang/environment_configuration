@@ -9,7 +9,12 @@ _此文档本意为了跑通视觉自瞄代码，亦可用于自己电脑环境�
 
 **1.获取资源**
 
+需要的资源有自瞄代码，clash梯子，VScode软件，迈德威视相机驱动，opencv资源包，openvino资源包
+
+大家可以选择官网下载
+
 为方便起见，我整理了部分环境所需资源，大家可以通过我的百度网盘获取
+
 ###
 ```
 https://pan.baidu.com/s/1NEuoZ661denj51YCFZu-Ew
@@ -19,7 +24,6 @@ https://pan.baidu.com/s/1NEuoZ661denj51YCFZu-Ew
 ```
 56z2
 ```
-
 ###
 ###
 
