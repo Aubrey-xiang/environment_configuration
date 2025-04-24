@@ -52,37 +52,35 @@ sudo dpkg -i （下载好的安装包名称）
 ###
 ###
 
-**4.迈德威视相机驱动安装**
+**4.下载cmake**
 
-解压Mindvision压缩包，进入该文件夹下
-
-![image](https://github.com/user-attachments/assets/6ef6273e-4217-47f5-95b5-e675913be050)
-
-然后输入以下命令（学过编译的此处应该能明白原理）
+当我们直接使用sudo apt-get install cmake命令下载cmake时无法下载其最新版本，因此我们使用如下方法下载
 
 ```
-mkdir build
+sudo apt-get update
 ```
 ```
-cd build
+sudo apt-get -y install software-properties-common lsb-release
 ```
 ```
-cmake .. 
+sudo apt-add-repository "deb https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main"
 ```
 ```
-make 
+wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc | sudo apt-key add -
 ```
 ```
-sudo make install
+sudo apt-get update
 ```
-至此，迈德威视相机驱动就安装好了
+```
+sudo apt-get install cmake
+```
 
 ###
 ###
 
 **5.opencv资源包**
 
-解压opencv压缩包，进入该文件夹下创建build文件夹，然后在终端打开build文件夹依次输入（此处与迈德威视相机驱动安装原理相同）
+解压opencv压缩包，进入该文件夹下创建build文件夹，然后在终端打开build文件夹依次输入
 ```
 cmake .. 
 ```
@@ -129,28 +127,22 @@ source /opt/intel/openvino_toolkit_2023.3.0(解压后的文件名)/setupvars.sh
 ###
 ###
 
-**7.下载cmake**
+**7.迈德威视相机驱动安装**
 
-当我们直接使用sudo apt-get install cmake命令下载cmake时无法下载其最新版本，因此我们使用如下方法下载
+解压Mindvision压缩包，进入该文件夹下
+
+![image](https://github.com/user-attachments/assets/6ef6273e-4217-47f5-95b5-e675913be050)
+
+然后输入以下命令
 
 ```
-sudo apt-get update
+chmod +x install.sh
 ```
 ```
-sudo apt-get -y install software-properties-common lsb-release
+sudo ./install.sh
 ```
-```
-sudo apt-add-repository "deb https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main"
-```
-```
-wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc | sudo apt-key add -
-```
-```
-sudo apt-get update
-```
-```
-sudo apt-get install cmake
-```
+
+至此，迈德威视相机驱动就安装好了
 
 ###
 ###
