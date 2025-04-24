@@ -80,7 +80,12 @@ sudo apt-get install cmake
 
 **5.opencv资源包**
 
-解压opencv压缩包，进入该文件夹下创建build文件夹，然后在终端打开build文件夹依次输入
+解压opencv压缩包，进入该文件夹下创建build文件夹
+
+![image](https://github.com/user-attachments/assets/c072e756-faa1-4946-a52f-e7692056c975)
+
+然后在终端打开build文件夹依次输入
+
 ```
 cmake .. 
 ```
