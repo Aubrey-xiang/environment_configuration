@@ -204,7 +204,7 @@ mkdir build && cd build
 cmake ..
 ```
 ```
-make -j
+make 
 ```
 ```
 sudo make install
@@ -230,7 +230,7 @@ mkdir build && cd build
 cmake ..
 ```
 ```
-make -j
+make 
 ```
 ```
 sudo make install
