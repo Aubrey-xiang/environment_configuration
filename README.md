@@ -87,10 +87,11 @@ sudo apt-get install cmake
 然后在终端打开build文件夹依次输入
 
 ```
-cmake .. 
+sudo cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..
+
 ```
 ```
-make 
+sudo make 
 ```
 ```
 sudo make install
