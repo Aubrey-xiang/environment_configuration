@@ -88,7 +88,6 @@ sudo apt-get install cmake
 
 ```
 sudo cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..
-
 ```
 ```
 sudo make 
