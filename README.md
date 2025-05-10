@@ -248,6 +248,16 @@ sudo make install
 ```
 sudo apt install libceres-dev
 ```
+
+###
+###
+
+**16.foxglove-bridge**
+
+```
+sudo apt install ros-humble-foxglove-bridge
+```
+
 ###
 ###
 
