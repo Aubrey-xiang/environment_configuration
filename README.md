@@ -9,27 +9,16 @@ _此文档本意为了跑通视觉自瞄代码，亦可用于自己电脑环境�
 
 **1.获取资源**
 
-需要的资源有自瞄代码，clash梯子，VScode软件，迈德威视相机驱动，opencv资源包，openvino资源包
+需要的资源有自瞄代码，clash，VScode，mindvision相机驱动，hik相机驱动，opencv，openvino，g2o，sophus
 
-由于网盘中的资源不是最新版，大家可以选择官网下载最新版，或者加我qq获取，我的qq：1423031539
+建议把这些资源整理到你的U盘里，部分资源可加我qq获取，我的qq：1423031539
 
-为方便起见，我整理了部分环境所需资源，大家可以通过我的百度网盘获取
-
-###
-```
-https://pan.baidu.com/s/1NEuoZ661denj51YCFZu-Ew
-```
- 
-提取码:
-```
-56z2
-```
 ###
 ###
 
 **2.下载QQ**
 
-首先下载QQ 选择x86版本的deb文件进行下载，下载好后可使用如下命令进行安装
+安装QQ时，对deb文件进行下载，下载好后可使用如下命令进行安装
 ```
 sudo dpkg -i （下载好的安装包名称）
 ```
@@ -39,13 +28,23 @@ sudo dpkg -i （下载好的安装包名称）
 
 **3.传输文件**
 
-将下载好的压缩包通过qq传输至ubuntu系统
+将下载好的资源包用QQ或其他方式传输至ubuntu系统
 
-这里面文件依次包括自瞄代码，clash梯子，VScode软件，迈德威视相机驱动，opencv资源包，openvino资源包
+对于deb文件的安装，在此不做过多赘述，参考QQ的安装方式。
 
-![image](https://github.com/user-attachments/assets/57f64dfe-66a7-46ea-93bd-b2fae14706f1)
+注意，对于梯子的安装可能产生以下报错
 
-对于梯子，VScode软件的安装方式不再做过多赘述，参考QQ的安装方式
+![b19d6b648a9febb6725acfb9032aba05_720](https://github.com/user-attachments/assets/8bde8dcc-bf0c-4714-8d11-70575ad113fe)
+
+报错后输入这两个命令修复
+
+```
+sudo apt update
+```
+
+```
+sudo apt install -f
+```
 
 下面介绍迈德威视相机包，opencv资源包，openvino资源包的安装方法
 
@@ -97,6 +96,20 @@ sudo make install
 ```
 
 至此opencv便安装好了
+
+安装opencv时可能出现以下报错，原因是CMake没有找到可用的 C++ 编译器
+
+![c3a54858f7865b7b65593c799a290374](https://github.com/user-attachments/assets/aba55f35-d52a-4121-a19d-a3e80b1c0c34)
+
+运行以下命令便可解决
+
+```
+sudo apt update
+```
+
+```
+sudo apt install build-essential
+```
 
 ###
 ###
