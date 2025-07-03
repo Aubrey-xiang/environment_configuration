@@ -170,8 +170,19 @@ sudo ./install.sh
 ###
 ###
 
+**8.海康相机驱动以及客户端安装**
 
-**8.一键安装ros humble版本**
+根据电脑架构，选择适合的版本安装
+
+![image](https://github.com/user-attachments/assets/10ac56d3-da57-416d-9090-55aad84868bf)
+
+![image](https://github.com/user-attachments/assets/a821a6b1-68b8-488a-8ac7-d543d8d28eb3)
+
+###
+###
+
+
+**9.一键安装ros humble版本**
 
 此处使用鱼香ros大佬的一键下载命令下载即可
 ```
@@ -181,7 +192,7 @@ wget http://fishros.com/install -O fishros && . fishros
 ###
 ###
 
-**9.下载git**
+**10.下载git**
 ```
 sudo apt install git
 ```
@@ -189,7 +200,7 @@ sudo apt install git
 ###
 ###
 
-**10.下载camera-info-manager包**
+**11.下载camera-info-manager包**
 
 ```
 sudo apt install ros-humble-camera-info-manager
@@ -197,7 +208,7 @@ sudo apt install ros-humble-camera-info-manager
 ###
 ###
 
-**11.下载xacro包**
+**12.下载xacro包**
 
 ```
 sudo apt install ros-humble-xacro
@@ -206,14 +217,14 @@ sudo apt install ros-humble-xacro
 ###
 ###
 
-**12.fmt库**
+**13.fmt库**
 ```
 sudo apt install libfmt-dev
 ```
 ###
 ###
 
-**13.Sophus库 (G2O库依赖)**
+**14.Sophus库 (G2O库依赖)**
 ```
 git clone https://github.com/strasdat/Sophus
 ```
@@ -236,7 +247,7 @@ sudo make install
 ###
 ###
 
-**14.G2O库 (优化装甲板Yaw角度)**
+**15.G2O库 (优化装甲板Yaw角度)**
 ```
 sudo apt install libeigen3-dev libspdlog-dev libsuitesparse-dev qtdeclarative5-dev qt5-qmake libqglviewer-dev-qt5
 ```
@@ -261,7 +272,7 @@ sudo make install
 ###
 ###
 
-**15.Ceres库 (能量机关曲线拟合)**
+**16.Ceres库 (能量机关曲线拟合)**
 
 ```
 sudo apt install libceres-dev
@@ -270,7 +281,7 @@ sudo apt install libceres-dev
 ###
 ###
 
-**16.foxglove-bridge**
+**17.foxglove-bridge**
 
 ```
 sudo apt install ros-humble-foxglove-bridge
