@@ -51,8 +51,6 @@ sudo apt update
 sudo apt install -f
 ```
 
-下面介绍迈德威视相机包，opencv资源包，openvino资源包的安装方法
-
 ###
 ###
 
