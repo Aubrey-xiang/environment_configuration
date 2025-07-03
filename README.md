@@ -9,9 +9,14 @@ _此文档本意为了跑通视觉自瞄代码，亦可用于自己电脑环境�
 
 **1.获取资源**
 
-需要的资源有自瞄代码，clash，VScode，mindvision相机驱动，hik相机驱动，opencv，openvino，g2o，sophus
+必须的资源有自瞄代码，clash，VScode，mindvision相机驱动，hik相机驱动，opencv，openvino，g2o，sophus，其他资源舍取下载（怕视觉板内存不够）
 
-建议把这些资源整理到你的U盘里，部分资源可加我qq获取，我的qq：1423031539
+![image](https://github.com/user-attachments/assets/6b0a971f-0cd7-4ffe-a9c0-2c6e626cfeb3)
+
+![image](https://github.com/user-attachments/assets/6c3d6e2c-6cb1-4dee-a4c2-0963e40e0f98)
+
+
+建议把这些资源整理到你的U盘里，资源可自行下载，也可加我qq获取，我的qq：1423031539
 
 ###
 ###
