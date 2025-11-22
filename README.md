@@ -2,36 +2,23 @@ _此项目为重装后视觉版环境配置方法参考_
 
 _此方法基于ubuntu22.04系统_
 
-_此文档本意为了跑通视觉自瞄代码，亦可用于自己电脑环境配置_
+_此文档本意为了跑通视觉自瞄代码_
 
 ###
 ###
 
 **1.获取资源**
 
-必须的资源有自瞄代码，clash，VScode，mindvision相机驱动，hik相机驱动，opencv，openvino，g2o，sophus，其他资源舍取下载（怕视觉板内存不够）
+必须的资源有clash，VScode，mindvision相机驱动，hik相机驱动，opencv，openvino，g2o，sophus，其他资源舍取下载（怕视觉板内存不够）
 
 ![image](https://github.com/user-attachments/assets/6b0a971f-0cd7-4ffe-a9c0-2c6e626cfeb3)
 
 ![image](https://github.com/user-attachments/assets/6c3d6e2c-6cb1-4dee-a4c2-0963e40e0f98)
 
-
-建议把这些资源整理到你的U盘里，资源可自行下载，也可加我qq获取，我的qq：1423031539
-
 ###
 ###
 
-**2.下载QQ**
-
-安装QQ时，对deb文件进行下载，下载好后可使用如下命令进行安装
-```
-sudo dpkg -i （下载好的安装包名称）
-```
-
-###
-###
-
-**3.传输文件**
+**2.传输文件**
 
 将下载好的资源包用QQ或其他方式传输至ubuntu系统
 
@@ -54,7 +41,7 @@ sudo apt install -f
 ###
 ###
 
-**4.下载cmake**
+**3.cmake**
 
 当我们直接使用sudo apt-get install cmake命令下载cmake时无法下载其最新版本，因此我们使用如下方法下载
 
@@ -80,7 +67,7 @@ sudo apt-get install cmake
 ###
 ###
 
-**5.opencv资源包**
+**4.opencv**
 
 解压opencv压缩包，进入该文件夹下创建build文件夹
 
@@ -117,7 +104,7 @@ sudo apt install build-essential
 ###
 ###
 
-**6.openvino资源包**
+**5.openvino**
 
 在/计算机/opt文件路径下创建文件夹intel (打开终端输入sudo mkdir intel)
 
@@ -148,7 +135,7 @@ source /opt/intel/openvino_toolkit_2023.3.0(解压后的文件名)/setupvars.sh
 ###
 ###
 
-**7.迈德威视相机驱动安装**
+**6.mindvision SDK**
 
 解压Mindvision压缩包，进入该文件夹下
 
@@ -168,7 +155,7 @@ sudo ./install.sh
 ###
 ###
 
-**8.海康相机驱动以及客户端安装**
+**7.hikrobot SDK STD**
 
 根据电脑架构，选择适合的版本安装
 
@@ -180,7 +167,7 @@ sudo ./install.sh
 ###
 
 
-**9.一键安装ros humble版本**
+**8.ros2 humble**
 
 此处使用鱼香ros大佬的一键下载命令下载即可
 ```
@@ -190,39 +177,20 @@ wget http://fishros.com/install -O fishros && . fishros
 ###
 ###
 
-**10.下载git**
+**9.else**
 ```
-sudo apt install git
-```
-
-###
-###
-
-**11.下载camera-info-manager包**
-
-```
-sudo apt install ros-humble-camera-info-manager
-```
-###
-###
-
-**12.下载xacro包**
-
-```
-sudo apt install ros-humble-xacro
+sudo apt install -y \
+    git \
+    ros-humble-camera-info-manager \
+    ros-humble-xacro \
+    libfmt-dev \
+    ros-humble-foxglove-bridge
 ```
 
 ###
 ###
 
-**13.fmt库**
-```
-sudo apt install libfmt-dev
-```
-###
-###
-
-**14.Sophus库 (G2O库依赖)**
+**10.Sophus库 (G2O库依赖)**
 ```
 git clone https://github.com/strasdat/Sophus
 ```
@@ -245,7 +213,7 @@ sudo make install
 ###
 ###
 
-**15.G2O库 (优化装甲板Yaw角度)**
+**11.G2O库 (优化装甲板Yaw角度)**
 ```
 sudo apt install libeigen3-dev libspdlog-dev libsuitesparse-dev qtdeclarative5-dev qt5-qmake libqglviewer-dev-qt5
 ```
@@ -270,19 +238,10 @@ sudo make install
 ###
 ###
 
-**16.Ceres库 (能量机关曲线拟合)**
+**12.ceres**
 
 ```
 sudo apt install libceres-dev
-```
-
-###
-###
-
-**17.foxglove-bridge**
-
-```
-sudo apt install ros-humble-foxglove-bridge
 ```
 
 ###
