@@ -15,6 +15,8 @@ _此文档本意为了跑通MA战队2026赛季视觉自瞄代码_
 
 建议安装顺序为QQ，clash，VScode，mindvision相机驱动，hik相机驱动，openvino, 其他（参考步骤2）
 
+对于软件，驱动以及openvino的安装这里不再赘述，不会可以参考ma_vision_2025分支
+
 注意，ubuntu22的clash的安装可能产生以下报错
 
 ![b19d6b648a9febb6725acfb9032aba05_720](https://github.com/user-attachments/assets/8bde8dcc-bf0c-4714-8d11-70575ad113fe)
